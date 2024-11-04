@@ -11,6 +11,10 @@ const config: Config = {
   theme: {
     extend: {
       keyframes: {
+        underline: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
         slideUp: {
           "0%": { transform: "translateY(50%)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
@@ -23,6 +27,7 @@ const config: Config = {
       animation: {
         slideUp: "slideUp 0.8s ease-in-out",
         SlideDown: "slideDown 0.5s ease-in-out",
+        underline: "underline 1s ease-in-out forwards",
       },
       colors: {
         background: "hsl(var(--background))",
