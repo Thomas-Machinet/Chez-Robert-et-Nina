@@ -60,6 +60,10 @@ const config: Config = {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
+        primary_light: {
+          DEFAULT: "hsl(var(--primary-light))",
+          foreground: "hsl(var(--primary-light-foreground))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
