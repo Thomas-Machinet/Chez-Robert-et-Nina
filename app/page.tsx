@@ -6,10 +6,12 @@ import NavSide from "@/components/ui/navSide";
 import restaurantImage from "../public/leperrier-restaurants-1920x1080-f50_50.webp";
 import restaurantLogo from "../public/Chez_Robert_et_Nina_Logo-removebg-preview.png";
 import SocialLinkSegment from "@/components/ui/sociaLink";
+import imagePresentation from "../public/imageExemple.webp";
 import { useState } from "react";
 import MenuBurger from "@/components/ui/menuBurger";
 import Menu from "@/components/ui/menu";
 import entrée from "../public/leperrier-restaurants-1920x1080-f50_50.webp";
+import Image from "next/image";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -31,24 +33,34 @@ export default function Home() {
           >
             Chez Robert et Nina
           </h1>
-          <h2 className="text-center text-3xl">Restaurant traditionnel</h2>
-          <p className="mt-5">
-            Chez Robert et Nina" vous invite à découvrir la chaleur de
-            l’hospitalité roumaine en plein cœur de la France. Ce restaurant
-            unique est spécialisé dans une cuisine authentique, offrant une
-            carte riche en plats traditionnels, préparés avec passion et respect
-            des recettes d’antan. Dans une ambiance conviviale et accueillante,
-            "Chez Robert et Nina" est l’endroit idéal pour explorer des saveurs
-            venues d’ailleurs : des ragoûts savoureux aux pains faits maison, en
-            passant par des plats de légumes frais et colorés, tous élaborés
-            avec des ingrédients locaux et de saison. Que vous soyez amateur de
-            mets réconfortants ou curieux de nouvelles saveurs, une visite chez
-            "Chez Robert et Nina" vous promet un voyage culinaire inoubliable,
-            célébrant un héritage riche et varié. Venez partager une expérience
-            gastronomique immersive, où l’âme des traditions roumaines se révèle
-            dans chaque assiette !
-          </p>
+          <h2 className="mb-5 text-center text-3xl">Restaurant traditionnel</h2>
+          <div className="flex flex-col items-center gap-5 xl:flex-row">
+            <Image
+              src={imagePresentation.src}
+              alt="imagePresentation"
+              width={300} // Taille de base pour mobile
+              height={300} // Taille de base pour mobile
+              className="w-3/4 rounded-3xl md:w-1/2 xl:h-[450px] xl:w-[600px] xl:p-16" // Ajuste ces tailles en fonction du rendu souhaité
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 500px"
+            />
+            <p>
+              "Chez Robert et Nina" vous invite à découvrir l'hospitalité
+              roumaine au cœur de la France. Ce restaurant propose une cuisine
+              authentique, mettant à l'honneur des plats traditionnels préparés
+              avec passion. Dans une ambiance conviviale, savourez des ragoûts,
+              des pains faits maison et des légumes frais, élaborés avec des
+              ingrédients locaux et de saison. Que vous soyez amateur de mets
+              réconfortants ou en quête de nouvelles saveurs, une visite chez
+              "Chez Robert et Nina" vous promet un voyage culinaire riche en
+              traditions.
+            </p>
+          </div>
         </div>
+        <h2
+          className={`text-3xl font-bold text-primary ${pacifico.className} mt-10 border border-primary p-10 text-center`}
+        >
+          Le Menu
+        </h2>
         <section className="mt-10">
           <Menu title="Entrée" picturePresentation={entrée.src} />
         </section>

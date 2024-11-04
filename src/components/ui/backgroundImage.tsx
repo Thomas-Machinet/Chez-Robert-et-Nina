@@ -14,12 +14,12 @@ const BackgroundImage = (props: { src: string }) => {
       />
       <div className="absolute left-5 top-1/2 w-80 rounded-xl bg-primary/50 p-5 font-bold text-white md:left-14 md:w-auto xl:left-32 xl:p-16">
         <h1
-          className={`text-4xl ${pacifico.className} animate-slideUp antialiased md:text-5xl`}
+          className={`text-4xl ${pacifico.className} animate-slideUp antialiased md:text-5xl xl:text-7xl`}
         >
           Norbert et Nina
         </h1>
         <h2
-          className={`text-2xl ${pacifico.className} animate-slideUp antialiased `}
+          className={`text-2xl ${pacifico.className} animate-slideUp antialiased xl:text-5xl `}
         >
           Vous accueille dans leur restaurant
         </h2>
